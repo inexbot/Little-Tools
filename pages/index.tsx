@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         textAlign: "center",
       }}
     >
-      <h1>⚒️小工具ver 0.1</h1>
+      <h1>⚒️小工具ver 0.8</h1>
       <div style={{ marginTop: "20px" }}>
         <Link href="/circlepoint">
           <Button
