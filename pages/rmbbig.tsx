@@ -5,18 +5,7 @@ import { useState } from "react";
 const patrn = /^(\-)?\d*(\.\d+)?$/;
 const RobotForm: NextPage = () => {
   //blog.csdn.net/qq_45494634/article/details/120160622
-  https: const cnNums = [
-    "零",
-    "壹",
-    "贰",
-    "叁",
-    "肆",
-    "伍",
-    "陆",
-    "柒",
-    "捌",
-    "玖",
-  ];
+  const cnNums = ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"];
   const cnIntRadice = ["", "拾", "佰", "仟"];
   const cnIntUnits = ["", "万", "亿", "兆"];
   const cnDecUnits = ["角", "分", "毫", "厘"];
