@@ -61,7 +61,11 @@ const RobotForm: NextPage = () => {
         >
           <Input autoComplete="off" />
         </Form.Item>
-        <Button htmlType="submit" type="primary">
+        <Button
+          htmlType="submit"
+          type="primary"
+          style={{ width: "200px", margin: "20px 0px" }}
+        >
           计算
         </Button>
       </Form>

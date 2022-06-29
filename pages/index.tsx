@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         textAlign: "center",
       }}
     >
-      <h1>⚒️小工具ver 0.8</h1>
+      <h1>⚒️小工具ver 0.9</h1>
       <div style={{ marginTop: "20px" }}>
         <Link href="/circlepoint">
           <Button
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             type="primary"
             style={{ width: "200px", height: "50px", fontSize: "20px" }}
           >
-            角度弧度换算🖥️
+            角度弧度换算📐
           </Button>
         </Link>
       </div>
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             type="primary"
             style={{ width: "200px", height: "50px", fontSize: "20px" }}
           >
-            形态计算🖥️
+            形态计算🤖
           </Button>
         </Link>
       </div>
