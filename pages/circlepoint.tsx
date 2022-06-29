@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Button, Descriptions, Form, Image, Input, Switch } from "antd";
-import "antd/dist/antd.css";
+
+const patrn = /^\d*(\.\d+)?$/;
+
 function CirclePoint() {
   const [points, setPoints] = useState([[0, 0]]);
   const [sameR, setSameR] = useState(false);
   const [form] = Form.useForm();
   function compute(values: any) {
-    console.log(values);
     let pointsCache = [];
     let r1 = 0;
     let r2 = 0;
@@ -47,12 +48,33 @@ function CirclePoint() {
   }
   return (
     <div style={{ padding: "0px 20px" }}>
+      <h1>圆角矩形点位计算</h1>
       <Form form={form} onFinish={compute} style={{ marginTop: "30px" }}>
-        <Form.Item label="长边长度" name="L1" rules={[{ required: true }]}>
-          <Input />
+        <Form.Item
+          label="长边长度"
+          name="L1"
+          rules={[
+            {
+              required: true,
+              pattern: patrn,
+              message: "请输入数字，整数或浮点数。",
+            },
+          ]}
+        >
+          <Input autoComplete="off" />
         </Form.Item>
-        <Form.Item label="短边长度" name="L2" rules={[{ required: true }]}>
-          <Input />
+        <Form.Item
+          label="短边长度"
+          name="L2"
+          rules={[
+            {
+              required: true,
+              pattern: patrn,
+              message: "请输入数字，整数或浮点数。",
+            },
+          ]}
+        >
+          <Input autoComplete="off" />
         </Form.Item>
         <Form.Item label="同半径" name="sameR">
           <Switch
@@ -62,38 +84,72 @@ function CirclePoint() {
           />
         </Form.Item>
         {sameR ? (
-          <Form.Item label="圆弧半径" name="r" rules={[{ required: true }]}>
-            <Input />
+          <Form.Item
+            label="圆弧半径"
+            name="r"
+            rules={[
+              {
+                required: true,
+                pattern: patrn,
+                message: "请输入数字，整数或浮点数。",
+              },
+            ]}
+          >
+            <Input autoComplete="off" />
           </Form.Item>
         ) : (
           <div>
             <Form.Item
               label="圆弧半径r1"
               name="r1"
-              rules={[{ required: true }]}
+              rules={[
+                {
+                  required: true,
+                  pattern: patrn,
+                  message: "请输入数字，整数或浮点数。",
+                },
+              ]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
             <Form.Item
               label="圆弧半径r2"
               name="r2"
-              rules={[{ required: true }]}
+              rules={[
+                {
+                  required: true,
+                  pattern: patrn,
+                  message: "请输入数字，整数或浮点数。",
+                },
+              ]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
             <Form.Item
               label="圆弧半径r3"
               name="r3"
-              rules={[{ required: true }]}
+              rules={[
+                {
+                  required: true,
+                  pattern: patrn,
+                  message: "请输入数字，整数或浮点数。",
+                },
+              ]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
             <Form.Item
               label="圆弧半径r4"
               name="r4"
-              rules={[{ required: true }]}
+              rules={[
+                {
+                  required: true,
+                  pattern: patrn,
+                  message: "请输入数字，整数或浮点数。",
+                },
+              ]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
           </div>
         )}
@@ -107,7 +163,7 @@ function CirclePoint() {
             计算
           </Button>
           <br />
-          <Image src="/circle.png" />
+          <Image src="/circle.png" alt="circle" />
         </div>
       </Form>
       <Descriptions title="计算结果" bordered>
@@ -125,7 +181,7 @@ function CirclePoint() {
 export async function getStaticProps() {
   return {
     props: {}, // will be passed to the page component as props
-  }
+  };
 }
 
 export default CirclePoint;
