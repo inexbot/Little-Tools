@@ -31,6 +31,16 @@ const Home: NextPage = () => {
           </Button>
         </Link>
       </div>
+      <div style={{ marginTop: "20px" }}>
+        <Link href="/robotform">
+          <Button
+            type="primary"
+            style={{ width: "200px", height: "50px", fontSize: "20px" }}
+          >
+            形态计算🖥️
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
