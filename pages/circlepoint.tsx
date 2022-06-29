@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Descriptions, Form, Image, Input, Switch } from "antd";
 
-const patrn = /^\d*(\.\d+)?$/;
+const patrn = /^(\-)?\d*(\.\d+)?$/;
 
 function CirclePoint() {
   const [points, setPoints] = useState([[0, 0]]);

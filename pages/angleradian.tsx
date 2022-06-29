@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { Button, Form, Input } from "antd";
 import { useState } from "react";
-const patrn = /^\d*(\.\d+)?$/;
+const patrn = /^(\-)?\d*(\.\d+)?$/;
 const AngleRadian: NextPage = () => {
   const [angle, setAngle] = useState("");
   const [radian, setRadian] = useState("");

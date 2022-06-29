@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { Button, Descriptions, Form, Input } from "antd";
 import { useState } from "react";
-const patrn = /^\d*(\.\d+)?$/;
+const patrn = /^(\-)?\d*(\.\d+)?$/;
 const RobotForm: NextPage = () => {
   const [robotForm, setRobotForm] = useState(0);
   const [robotFormString, setRobotFormString] = useState("");
