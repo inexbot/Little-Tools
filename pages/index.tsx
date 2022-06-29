@@ -5,7 +5,7 @@ import {Button} from "antd"
 const Home: NextPage = () => {
   return (
     <div style={{ padding: "0px 20px", textAlign: "center" }}>
-      <h1>小工具⚒️</h1>
+      <h1>⚒️小工具ver 0.1</h1>
       <Link href="/circlepoint">
         <Button
           type="primary"
