@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         textAlign: "center",
       }}
     >
-      <h1>⚒️小工具ver 0.9</h1>
+      <h1>⚒️小工具ver 1.0</h1>
       <div style={{ marginTop: "20px" }}>
         <Link href="/circlepoint">
           <Button
@@ -38,6 +38,16 @@ const Home: NextPage = () => {
             style={{ width: "200px", height: "50px", fontSize: "20px" }}
           >
             形态计算🤖
+          </Button>
+        </Link>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <Link href="/rmbtochinese">
+          <Button
+            type="primary"
+            style={{ width: "200px", height: "50px", fontSize: "20px" }}
+          >
+            人民币大写
           </Button>
         </Link>
       </div>
