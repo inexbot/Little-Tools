@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             type="primary"
             style={{ width: "200px", height: "50px", fontSize: "20px" }}
           >
-            人民币大写
+            人民币大写💸
           </Button>
         </Link>
       </div>
