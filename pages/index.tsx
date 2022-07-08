@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         textAlign: "center",
       }}
     >
-      <h1>⚒️小工具ver 1.0</h1>
+      <h1>⚒️小工具ver 1.3</h1>
       <div style={{ marginTop: "20px" }}>
         <Link href="/circlepoint">
           <Button
@@ -28,6 +28,16 @@ const Home: NextPage = () => {
             style={{ width: "200px", height: "50px", fontSize: "20px" }}
           >
             角度弧度换算📐
+          </Button>
+        </Link>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <Link href="/encoder">
+          <Button
+            type="primary"
+            style={{ width: "200px", height: "50px", fontSize: "20px" }}
+          >
+            编码器分辨率转换🧻
           </Button>
         </Link>
       </div>

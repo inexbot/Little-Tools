@@ -86,7 +86,7 @@ const RMBToChinese: NextPage = () => {
   return (
     <div style={{ padding: "0px 20px", textAlign: "center" }}>
       <h1>人民币数字转大写</h1>
-      <Form>
+      <Form labelCol={{ span: 4 }} wrapperCol={{ span: 16 }}>
         <Form.Item
           label="数字"
           name="num"

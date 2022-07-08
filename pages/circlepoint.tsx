@@ -45,11 +45,22 @@ function CirclePoint() {
     pointsCache.push([circleCenterX4, -circleCenterY4]); //P12
     pointsCache.push([x - r4, -y]); //P13
     setPoints(pointsCache);
+    scrollToAnchor();
+  }
+  function scrollToAnchor() {
+    const anchorele = document.getElementById("anchor");
+    anchorele?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
   return (
     <div style={{ padding: "0px 20px" }}>
       <h1>圆角矩形点位计算</h1>
-      <Form form={form} onFinish={compute} style={{ marginTop: "30px" }}>
+      <Form
+        form={form}
+        onFinish={compute}
+        style={{ marginTop: "30px" }}
+        labelCol={{ span: 4 }}
+        wrapperCol={{ span: 16 }}
+      >
         <Form.Item
           label="长边长度"
           name="L1"
@@ -81,6 +92,7 @@ function CirclePoint() {
             onChange={(checked) => {
               setSameR(checked);
             }}
+            checked={sameR}
           />
         </Form.Item>
         {sameR ? (
@@ -166,6 +178,7 @@ function CirclePoint() {
           <Image src="/circle.png" alt="circle" />
         </div>
       </Form>
+      <div id="anchor"></div>
       <Descriptions title="计算结果" bordered>
         {points.map((v, i) => (
           <Descriptions.Item label={`P${i + 1}`} key={i}>

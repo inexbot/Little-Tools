@@ -30,7 +30,7 @@ const AngleRadian: NextPage = () => {
     <div style={{ padding: "0px 20px", textAlign: "center" }}>
       <h1>角度弧度转换</h1>
       <h2>弧度=(角度*π)/180</h2>
-      <Form>
+      <Form labelCol={{ span: 4 }} wrapperCol={{ span: 16 }}>
         <Form.Item label="角度°">
           <Input
             autoComplete="off"

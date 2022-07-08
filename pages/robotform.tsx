@@ -21,7 +21,12 @@ const RobotForm: NextPage = () => {
   return (
     <div style={{ padding: "0px 20px", textAlign: "center" }}>
       <h1>形态参数计算</h1>
-      <Form form={form} onFinish={compute}>
+      <Form
+        form={form}
+        onFinish={compute}
+        labelCol={{ span: 4 }}
+        wrapperCol={{ span: 16 }}
+      >
         <Form.Item
           label="关节1轴坐标值"
           name="a1"
